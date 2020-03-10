@@ -1,4 +1,19 @@
+`openssl req -new -newkey rsa:4096 -days 365 -x509 -keyout ca-key -out ca-cert -nodes`
+
+cd kafka
+
 https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/KafkaIntegrationGuide/TLS-SSL/KafkaTLS-SSLExamplePart3ConfigureKafka.htm
+
+
+after all done
+
+`./bin/zookeeper-server-start.sh config/zookeeper.properties &`
+
+`./bin/kafka-server-start.sh config/server.properties &`
+
+`./bin/kafka-console-producer.sh --broker-list kafka01.mycompany.com:9093 --topic messages --producer.config config/client.properties`
+
+`./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic messages --consumer.config config/client.properties --from-beginning`
 
 
 sudo vi /etc/hosts
