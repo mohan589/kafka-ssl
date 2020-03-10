@@ -1,1 +1,6 @@
 https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/KafkaIntegrationGuide/TLS-SSL/KafkaTLS-SSLExamplePart3ConfigureKafka.htm
+
+
+sudo vi /etc/hosts
+
+add `127.0.0.1 kafka01.mycompany.com`
